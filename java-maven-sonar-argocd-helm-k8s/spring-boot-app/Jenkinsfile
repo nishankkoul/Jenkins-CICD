@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://54.210.194.59:9000/"
+        SONAR_URL = "http://54.210.194.59:9000/" //Change this value depending upon your VM's IP Address
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
